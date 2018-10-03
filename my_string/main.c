@@ -3,6 +3,7 @@
 #include<time.h>
 #include"my_string.h"
 #include<string.h>
+#define n 10000
 
 void main()
 {
@@ -29,46 +30,55 @@ void main()
     }
   }
   str1[i] = '\0';
-  printf("\nTotal chars in file : %d \n", i);
+  printf("\n Total chars in file : %d \n", i);
+
 
   t = clock();
   strcpy(str2,str1);
   t = clock() - t;
-
   double time_taken = ((double)t);
-
-  printf("\n Exec Time of strcpy : %f \n", time_taken);
+  printf("\n Exec Time of strcpy : %f ", time_taken);
 
   t = clock();
   my_strcpy(str2,str1);
   t = clock() - t;
-
   time_taken = ((double)t);
-
   printf("\n Exec Time of my_strcpy : %f \n\n", time_taken);
 
-  t = clock();
-  strncpy(str2,str1,10000);
-  t = clock() - t;
 
-  time_taken = ((double)t);
 
-  printf("\n Exec Time of strncpy : %f \n", time_taken);
 
   t = clock();
-  my_strncpy(str2,str1, 10000);
+  strncpy(str2,str1,n);
   t = clock() - t;
-
   time_taken = ((double)t);
+  printf("\n Exec Time of strncpy : %f ", time_taken);
 
+  t = clock();
+  my_strncpy(str2,str1,n);
+  t = clock() - t;
+  time_taken = ((double)t);
   printf("\n Exec Time of my_strncpy : %f \n\n", time_taken);
 
-/*
-  char str2[20], *str1 = "asdfghs";
-  my_strncpy(str2,str1,3);
-  printf("\n%s\n", str2);
-*/
+
+
+
+  t = clock();
+  strlen(str1);
+  t = clock() - t;
+  time_taken = ((double)t);
+  printf("\n Exec Time of strlen : %f ", time_taken);
+
+  t = clock();
+  my_strlen(str1);
+  t = clock() - t;
+  time_taken = ((double)t);
+  printf("\n Exec Time of my_strlen  : %f \n\n", time_taken);
+
+
   free(str1);
   free(str2);
   fclose(f1);
+
+
 }
