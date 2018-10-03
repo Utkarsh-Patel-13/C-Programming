@@ -1,7 +1,7 @@
 GENERAL INFO :
-		Input File Size : 13.3 kb
+		Input File Size : 13.2 kb
 
-		Number Of Characters in File :  13310
+		Number Of Characters in File :  13215	
 
 	Time taken by each function is measured using the function clock() [from library time.h]. This function returns number of clock ticks elapsed since program was launched.
 So the values displayed here is not in seconds. Also the time shown here is average time for atleast 10 runs. For the functions involving integral input (example strncpy(), strncmp() etc.), the integral input provided is 10000.
