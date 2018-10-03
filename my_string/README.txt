@@ -18,7 +18,8 @@ Implementation :
 
 
 Testing :
-	Functions implemented in my_string.h are benchmarked against respective library functions. In this process, a file of particular size containing random characters is used.
+	Functions implemented in my_string.h are benchmarked against respective library functions. 
+In this process, a file of particular size containing random characters is used.
 The string functions then are tested on it.(More details in Test.txt).
 
 
