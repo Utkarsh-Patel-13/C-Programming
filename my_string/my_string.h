@@ -11,24 +11,16 @@
 */
 char* my_strcpy(char* dest, const char* src)
 {
-    while(*src)                         // while end of string is not reached
-    {
-      *dest = *src;
-      src++;
-      dest++;
-    }
-    *dest = '\0';
 
-    /* ALTERNATE METHOD :
-    int i;
+  int i;
 
-    for(i=0 ; src[i]!='\0'; i++)
-    {
+  for(i=0 ; src[i]!='\0'; i++)
+  {
     dest[i] = src[i];
-    }
-    dest[i] = '\0';
+  }
+  dest[i] = '\0';
 
-  */
+
 
   return dest;
 }
@@ -40,23 +32,15 @@ char* my_strcpy(char* dest, const char* src)
 */
 char* my_strncpy(char* dest, const char* src, int n)
 {
-  while(*src && n-- > 0)                // copy src to dest until first 'n' characters otherwise the full string
+
+  int i;
+
+  for(i=0 ; i<n && src[i]!='\0' ; i++)
   {
-    *dest = *src;
-    src++;
-    dest++;
+    dest[i] = src[i];
   }
+  dest[i] = '\0';
 
-/* ALTERNATE METHOD :
-      int i;
-
-      for(i=0 ; i<n && src[i]!='\0' ; i++)
-      {
-      dest[i] = src[i];
-      }
-      dest[i] = '\0';
-
-*/
 
   return dest;
 }
