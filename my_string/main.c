@@ -10,7 +10,7 @@ void main()
 
   clock_t t;
   FILE *f1;
-  f1 = fopen("asd.txt","r");
+  f1 = fopen("char_file.txt","r");
   char ch;
   int size, i=0;
 
