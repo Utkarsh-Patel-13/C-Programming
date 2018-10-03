@@ -39,3 +39,15 @@ For example : my_strcpy() is equivalent to library function strcpy().
 
 4. Test.txt : 
 	File containing details about test times of functions(tested on the file "char_file.txt") from my_string.h and string.h.
+
+
+
+Works still left :
+	
+	1. Implementation of few functions like :
+		a. strrchr()
+		b. strstr()
+		c. strtok()
+		d. memcpy()
+		
+	2. Testing of few functions is still left.	
