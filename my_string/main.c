@@ -33,6 +33,9 @@ void main()
   printf("\n Total chars in file : %d \n", i);
 
 
+  
+  //	Time testing for strcpy
+
   t = clock();
   strcpy(str2,str1);
   t = clock() - t;
@@ -46,6 +49,8 @@ void main()
   printf("\n Exec Time of my_strcpy : %f \n\n", time_taken);
 
 
+  
+  //	Time testing for strncpy
 
 
   t = clock();
@@ -61,6 +66,8 @@ void main()
   printf("\n Exec Time of my_strncpy : %f \n\n", time_taken);
 
 
+  
+  //	Time testing for strlen
 
 
   t = clock();
