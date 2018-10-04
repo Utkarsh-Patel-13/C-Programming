@@ -19,6 +19,7 @@ void main()
   rewind(f1);
 
   char *str1 = (char *)malloc(size);
+  size = size*2;
   char *str2 = (char *)malloc(size);
 
   while(feof(f1) == 0)
@@ -31,10 +32,7 @@ void main()
   }
   str1[i] = '\0';
   printf("\n Total chars in file : %d \n", i);
-
-
-  
-  //	Time testing for strcpy
+  fclose(f1);
 
   t = clock();
   strcpy(str2,str1);
@@ -49,8 +47,6 @@ void main()
   printf("\n Exec Time of my_strcpy : %f \n\n", time_taken);
 
 
-  
-  //	Time testing for strncpy
 
 
   t = clock();
@@ -66,8 +62,6 @@ void main()
   printf("\n Exec Time of my_strncpy : %f \n\n", time_taken);
 
 
-  
-  //	Time testing for strlen
 
 
   t = clock();
@@ -83,9 +77,65 @@ void main()
   printf("\n Exec Time of my_strlen  : %f \n\n", time_taken);
 
 
+  my_strcpy(str2,str1);
+
+// Taking the worst case for comparing strings, that is both the strings are same, so the function will check till the last
+  t = clock();
+  int x = strcmp(str1,str2);
+  t = clock() - t;
+  time_taken = ((double)t);
+  printf("\n Exec Time of strcmp : %f ", time_taken);
+
+
+  t = clock();
+  x = my_strcmp(str1,str2);
+  t = clock() - t;
+  time_taken = ((double)t);
+  printf("\n Exec Time of my_strcmp  : %f \n\n", time_taken);
+
+
+  my_strcpy(str2,str1);
+// strcmpi() is not available in C library (But it is available in C++ library)
+  t = clock();
+  x = my_strcmpi(str1,str2);
+  t = clock() - t;
+  time_taken = ((double)t);
+  printf("\n Exec Time of my_strcmpi  : %f \n\n", time_taken);
+
+
+
+  t = clock();
+  x = strncmp(str1,str2,n);
+  t = clock() - t;
+  time_taken = ((double)t);
+  printf("\n Exec Time of strncmp : %f ", time_taken);
+
+
+  t = clock();
+  x = my_strncmp(str1,str2,n);
+  t = clock() - t;
+  time_taken = ((double)t);
+  printf("\n Exec Time of my_strncmp  : %f \n\n", time_taken);
+
+
+
+
+// Taking the worst case for comparing strings, that is both the strings are same, so the function will check till the last
+  t = clock();
+  x = memcmp(str1,str2,n);
+  t = clock() - t;
+  time_taken = ((double)t);
+  printf("\n Exec Time of memcmp : %f ", time_taken);
+
+  t = clock();
+  x = my_memcmp(str1,str2,n);
+  t = clock() - t;
+  time_taken = ((double)t);
+  printf("\n Exec Time of my_memcmp  : %f \n\n", time_taken);
+
+
+
   free(str1);
   free(str2);
-  fclose(f1);
-
 
 }
