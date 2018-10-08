@@ -14,24 +14,24 @@ Recorded Times :
 
 	FUNCTIONS 		Time Taken
 
-	strcpy()			0.000006
+	strcpy()		0.000006
 	my_strcpy()		0.000038
 
-	strncpy()			0.000002
-	my_strncpy()	0.000031
+	strncpy()		0.000002
+	my_strncpy()		0.000031
 
-	strlen()			0.000001
+	strlen()		0.000001
 	my_strlen()		0.000026
 
-	strcmp()			0.000002
+	strcmp()		0.000002
 	my_strcmp()		0.000091
 
-	my_strcmpi()	0.000193
+	my_strcmpi()		0.000193
+	
+	strncmp()		0.000002
+	my_strncmp()		0.000034
 
-	strncmp()			0.000002
-	my_strncmp()	0.000034
-
-	memcmp()			0.000004
+	memcmp()		0.000004
 	my_memcmp()		0.000034
 
 
