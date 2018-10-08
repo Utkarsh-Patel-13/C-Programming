@@ -5,12 +5,13 @@
 #include<string.h>
 #define n 10000
 
-void main()
+int main()
 {
 
   clock_t t;
-  FILE *f1;
-  f1 = fopen("char_file.txt","r");
+  FILE *f1, *f2;
+  f1 = fopen("char_file.txt", "r");
+  f2 = fopen("data.txt", "a");
   char ch;
   int size, i=0;
 
@@ -32,49 +33,54 @@ void main()
   }
   str1[i] = '\0';
   printf("\n Total chars in file : %d \n", i);
-  fclose(f1);
+
+
 
   t = clock();
   strcpy(str2,str1);
-  t = clock() - t;
-  double time_taken = ((double)t);
+  t = (clock() - t);
+  double time_taken = ((double)t)/CLOCKS_PER_SEC;
   printf("\n Exec Time of strcpy : %f ", time_taken);
+  fprintf(f2, " %lf ", time_taken );
 
   t = clock();
   my_strcpy(str2,str1);
   t = clock() - t;
-  time_taken = ((double)t);
+  time_taken = ((double)t)/CLOCKS_PER_SEC;
   printf("\n Exec Time of my_strcpy : %f \n\n", time_taken);
-
+  fprintf(f2, "%lf ", time_taken );
 
 
 
   t = clock();
   strncpy(str2,str1,n);
   t = clock() - t;
-  time_taken = ((double)t);
+  time_taken = ((double)t)/CLOCKS_PER_SEC;
   printf("\n Exec Time of strncpy : %f ", time_taken);
+  fprintf(f2, "%lf ", time_taken );
 
   t = clock();
   my_strncpy(str2,str1,n);
   t = clock() - t;
-  time_taken = ((double)t);
+  time_taken = ((double)t)/CLOCKS_PER_SEC;
   printf("\n Exec Time of my_strncpy : %f \n\n", time_taken);
-
+  fprintf(f2, "%lf ", time_taken );
 
 
 
   t = clock();
   strlen(str1);
   t = clock() - t;
-  time_taken = ((double)t);
+  time_taken = ((double)t)/CLOCKS_PER_SEC;
   printf("\n Exec Time of strlen : %f ", time_taken);
+  fprintf(f2, "%lf ", time_taken );
 
   t = clock();
   my_strlen(str1);
   t = clock() - t;
-  time_taken = ((double)t);
+  time_taken = ((double)t)/CLOCKS_PER_SEC;
   printf("\n Exec Time of my_strlen  : %f \n\n", time_taken);
+  fprintf(f2, "%lf ", time_taken );
 
 
   my_strcpy(str2,str1);
@@ -83,15 +89,17 @@ void main()
   t = clock();
   int x = strcmp(str1,str2);
   t = clock() - t;
-  time_taken = ((double)t);
+  time_taken = ((double)t)/CLOCKS_PER_SEC;
   printf("\n Exec Time of strcmp : %f ", time_taken);
+  fprintf(f2, "%lf ", time_taken );
 
 
   t = clock();
   x = my_strcmp(str1,str2);
   t = clock() - t;
-  time_taken = ((double)t);
+  time_taken = ((double)t)/CLOCKS_PER_SEC;
   printf("\n Exec Time of my_strcmp  : %f \n\n", time_taken);
+  fprintf(f2, "%lf ", time_taken );
 
 
   my_strcpy(str2,str1);
@@ -99,23 +107,26 @@ void main()
   t = clock();
   x = my_strcmpi(str1,str2);
   t = clock() - t;
-  time_taken = ((double)t);
+  time_taken = ((double)t)/CLOCKS_PER_SEC;
   printf("\n Exec Time of my_strcmpi  : %f \n\n", time_taken);
+  fprintf(f2, "%lf ", time_taken );
 
 
 
   t = clock();
   x = strncmp(str1,str2,n);
   t = clock() - t;
-  time_taken = ((double)t);
+  time_taken = ((double)t)/CLOCKS_PER_SEC;
   printf("\n Exec Time of strncmp : %f ", time_taken);
+  fprintf(f2, "%lf ", time_taken );
 
 
   t = clock();
   x = my_strncmp(str1,str2,n);
   t = clock() - t;
-  time_taken = ((double)t);
+  time_taken = ((double)t)/CLOCKS_PER_SEC;
   printf("\n Exec Time of my_strncmp  : %f \n\n", time_taken);
+  fprintf(f2, "%lf ", time_taken );
 
 
 
@@ -124,18 +135,23 @@ void main()
   t = clock();
   x = memcmp(str1,str2,n);
   t = clock() - t;
-  time_taken = ((double)t);
+  time_taken = ((double)t)/CLOCKS_PER_SEC;
   printf("\n Exec Time of memcmp : %f ", time_taken);
+  fprintf(f2, "%lf ", time_taken );
 
   t = clock();
   x = my_memcmp(str1,str2,n);
   t = clock() - t;
-  time_taken = ((double)t);
+  time_taken = ((double)t)/CLOCKS_PER_SEC;
   printf("\n Exec Time of my_memcmp  : %f \n\n", time_taken);
+  fprintf(f2, "%lf \n", time_taken );
 
 
 
   free(str1);
   free(str2);
+  fclose(f1);
+  fclose(f2);
+  return 0;
 
 }

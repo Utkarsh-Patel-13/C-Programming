@@ -1,0 +1,40 @@
+GENERAL INFO :
+		Input File Size : 13.2 kb
+
+		Number Of Characters in File :  13215
+
+	Time taken by each function is measured using the function clock() [from library time.h]. This function returns number of clock ticks elapsed since program was launched.
+Time displayed here is in seconds. Also the time shown here is average time from 50 runs. For the functions involving integral input (example strncpy(), strncmp() etc.), the integral input provided is 10000.
+
+This program was tested on Ubuntu system using gcc compiler.
+
+
+Recorded Times :
+
+
+	FUNCTIONS 		Time Taken
+
+	strcpy()			0.000006
+	my_strcpy()		0.000038
+
+	strncpy()			0.000002
+	my_strncpy()	0.000031
+
+	strlen()			0.000001
+	my_strlen()		0.000026
+
+	strcmp()			0.000002
+	my_strcmp()		0.000091
+
+	my_strcmpi()	0.000193
+
+	strncmp()			0.000002
+	my_strncmp()	0.000034
+
+	memcmp()			0.000004
+	my_memcmp()		0.000034
+
+
+
+
+// Other functions are still to test.

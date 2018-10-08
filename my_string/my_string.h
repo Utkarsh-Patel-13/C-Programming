@@ -20,8 +20,6 @@ char* my_strcpy(char* dest, const char* src)
   }
   dest[i] = '\0';
 
-
-
   return dest;
 }
 
@@ -70,6 +68,11 @@ size_t my_strlen(const char* str)
 */
 int my_strcmp(const char* str1, const char* str2)
 {
+
+  if(my_strlen(str1) != my_strlen(str2))
+  {
+    return 1;
+  }
 
   int i;
 
