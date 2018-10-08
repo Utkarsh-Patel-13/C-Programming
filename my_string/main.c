@@ -11,7 +11,7 @@ int main()
   clock_t t;
   FILE *f1, *f2;
   f1 = fopen("char_file.txt", "r");
-  f2 = fopen("data.txt", "a");
+  f2 = fopen("data.txt", "a");           //file to store run times of the functions
   char ch;
   int size, i=0;
 
