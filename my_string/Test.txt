@@ -37,4 +37,7 @@ Recorded Times :
 
 
 
-// Other functions are still to test.
+	Functions still to be tested :
+		1) strcat()
+		2) strncat()
+		3) strchr()
