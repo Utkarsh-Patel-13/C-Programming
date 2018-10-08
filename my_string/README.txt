@@ -43,12 +43,4 @@ For example : my_strcpy() is equivalent to library function strcpy().
 
 
 
-Works still left :
-	
-	1. Implementation of few functions like :
-		a. strrchr()
-		b. strstr()
-		c. strtok()
-		d. memcpy()
 		
-	2. Testing of few functions is still left.	
