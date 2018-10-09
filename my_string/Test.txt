@@ -12,7 +12,7 @@ This program was tested on Ubuntu system using gcc compiler.
 Recorded Times :
 
 
-	FUNCTIONS 		Time Taken
+	FUNCTIONS 		Time Taken(in seconds)
 
 	strcpy()		0.000006
 	my_strcpy()		0.000038
