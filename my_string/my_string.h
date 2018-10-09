@@ -104,42 +104,23 @@ int my_strcmp(const char* str1, const char* str2)
 */
 int my_strcmpi(const char* str1,const char* str2)
 {
-
   int i, rtn;
 
-  int len1 = my_strlen(str1);   //use of another string function
-  int len2 = my_strlen(str2);
-
-  char *temp1 = (char*)malloc(len1);      //temp1 stores str1 in uppercase
-  char *temp2 = (char*)malloc(len2);      //temp2 stores str2 in uppercase
-
-  for(i=0 ; str1[i]!='\0' ; i++)
+  for(i=0 ; str1[i]!='\0' && str2[i] != '\0' ; i++)
   {
-    temp1[i] = toupper(str1[i]);
-  }
-  for(i=0 ; str2[i]!='\0' ; i++)
-  {
-    temp2[i]=toupper(str2[i]);
-  }
-
-  for(i=0 ; temp1[i]!='\0' && temp2[i] != '\0' ; i++)
-  {
-    if(temp1[i] != temp2[i])
+    if(toupper(str1[i]) != toupper(str2[i]))
     {
-        rtn = (temp1[i]-temp2[i]);
+        rtn = (str1[i]-str2[i]);
     }
   }
-  if(temp1[i]=='\0')
+  if(str1[i]=='\0')
   {
-      rtn = (-temp2[i]);
+      rtn = (-str2[i]);
   }
   if(str2[i]=='\0')
   {
-      rtn = (temp1[i]);
+      rtn = (str1[i]);
   }
-
-  free(temp1);
-  free(temp2);
 
   return rtn;
 
