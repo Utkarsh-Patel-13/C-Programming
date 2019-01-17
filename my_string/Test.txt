@@ -8,6 +8,15 @@ Time displayed here is in seconds. Also the time shown here is average time from
 
 This program was tested on Ubuntu system using gcc compiler.
 
+d is 10000.
+
+This program was tested on Ubuntu system using gcc compiler.
+d is 10000.
+
+This program was tested on Ubuntu system using gcc compiler.
+d is 10000.
+
+This program was tested on Ubuntu system using gcc compiler.
 
 Recorded Times :
 
@@ -35,6 +44,8 @@ Recorded Times :
 	my_memcmp()		0.000034
 
 
+	memcmp()		0.000004
+	my_memcmp()		0.000034
 
 
 	Functions still to be tested :
